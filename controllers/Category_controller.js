@@ -28,7 +28,7 @@ exports.findAllCategory=function(req,res,next){
 }
 
 exports.deletbyID=function(req,res,next){
-    Category.findByIdAndDelete(req.body.id).exec((err,result){
+    Category.findByIdAndDelete(req.body.id).exec((err,result)=>{
         if(!err && result){
             return res.send(result)
         }else{
