@@ -7,6 +7,8 @@ router.get('/', function(req, res, next) {
   res.send('respond with a Category');
 });
 
+router.get('/getAllCategory',Cat.findAllCategory);
+
 
 router.post('/create',Cat.createCategory);
 
