@@ -5,7 +5,7 @@ exports.createCategory=function(req,res,next){
     var cat=new Category({
         name:data.category,
         description:data.description,
-        createdOn:new Date.now()
+        createdOn:Date.now()
     });
     cat.save((err,result)=>{
         if(!err && result){
